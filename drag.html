@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>简单拖拽</title>
+</head>
+<body>
+<div style="width: 600px;height: 300px;border: 1px solid #ddd;" ondrop="drop(event)" ondragover="allowDrag(event)"></div>
+<div style="width: 600px;height: 300px;border: 1px solid #ddd;" ondrop="drop(event)" ondragover="allowDrag(event)">
+    <img src="img/1.jpg" width="300px" ondragstart="drag(event)" id="img1">
+</div>
+<script>
+function drag(event){
+    event.dataTransfer.setData('Text',event.target.id)
+}
+function drop(ev) {
+    ev.preventDefault();
+    var dragId=ev.dataTransfer.getData('Text');
+    ev.target.appendChild(document.getElementById(dragId));
+}
+function allowDrag(ev) {
+    ev.preventDefault()
+}
+</script>
+</body>
+</html>
