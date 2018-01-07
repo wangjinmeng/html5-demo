@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>my first svg</title>
+</head>
+<body>
+<div>
+    <h2>多种应用方式</h2>
+    <p>embed</p>
+    <embed src="circle1.svg" type="image/svg+xml">
+    <p>object</p>
+    <object data="circle1.svg" type="image/svg+xml"></object>
+    <p>iframe</p>
+    <iframe src="circle1.svg" frameborder="0"></iframe>
+</div>
+<h2>各种形状</h2>
+<div>
+    <p>rect 矩形</p>
+    <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+        <rect width="300"
+              height="100"
+              style="fill:rgb(255,0,0);stroke-width:4;stroke:rgb(0,0,0)"
+        />
+    </svg>
+    <p>分开定义边框和填充的透明度</p>
+    <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+        <rect x="50" y="20" width="150" height="150"
+              style="fill:red;stroke: #000;stroke-width: 5;"/>
+    </svg>
+    <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+        <rect x="50" y="20" width="150" height="150"
+              style="fill:red;stroke: #000;stroke-width: 5;fill-opacity: 0.1;stroke-opacity:0.1"/>
+    </svg>
+    <p>使用opacity属性定义整体透明度</p>
+    <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+        <rect x="50" y="20" width="150" height="150"
+              style="fill: blue;stroke: pink;stroke-width:5;"/>
+    </svg>
+    <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+        <rect x="50" y="20" width="150" height="150"
+        style="fill: blue;stroke: pink;stroke-width:5;opacity: 0.5"/>
+    </svg>
+    <p>圆角矩形</p>
+    <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+        <rect x="50" y="20" rx="20" ry="20" width="150" height="150"
+        style="fill:red;stroke:black;stroke-width:5;opacity: 0.5;"/>
+    </svg>
+</div>
+<div>
+    <p>圆形</p>
+    <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+        <circle
+                cx="100"
+                cy="50"
+                r="40"
+                stroke="black"
+                stroke-width="1"
+                fill="red"
+        ></circle>
+    </svg>
+    <p>同心圆</p>
+    <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+        <circle cx="75" cy="75" r="50" fill="red"></circle>
+        <circle cx="75" cy="75" r="40" fill="white"></circle>
+    </svg>
+</div>
+<div>
+    <p>椭圆</p>
+    <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+        <ellipse cy="50" cx="50" rx="30" ry="50"></ellipse>
+    </svg>
+    <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+        <ellipse cx="50" cy="50" rx="50" ry="20"></ellipse>
+    </svg>
+    <p>叠加的椭圆</p>
+    <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+        <ellipse cx="75" cy="10" rx="75" ry="20" fill="red"></ellipse>
+        <ellipse cx="75" cy="30" rx="75" ry="20" fill="yellow"></ellipse>
+        <ellipse cx="75" cy="50" rx="75" ry="20" fill="blue"></ellipse>
+        <ellipse cx="75" cy="70" rx="75" ry="20" fill="lime"></ellipse>
+        <ellipse cx="75" cy="90" rx="75" ry="20" fill="blue"></ellipse>
+        <ellipse cx="75" cy="150" rx="75" ry="20" fill="blue"></ellipse>
+    </svg>
+    <p>同心椭圆</p>
+    <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+        <ellipse cx="75" cy="75" rx="60" ry="30" fill="red"></ellipse>
+        <ellipse cx="75" cy="75" rx="30" ry="15" fill="white"></ellipse>
+    </svg>
+</div>
+<div>
+    <p>直线</p>
+    <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+        <line x1="0"
+              y1="0"
+              x2="200"
+              y2="200"
+              stroke="red"
+              stroke-width="30"
+        ></line>
+    </svg>
+</div>
+<div>
+    <p>多边形</p>
+    <p>三角形</p>
+    <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+        <polygon points="200,10 200,140 50,140"
+                 style="fill:lime;stroke:purple;stroke-width: 1"
+        ></polygon>
+    </svg>
+    <p>多边形</p>
+    <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+        <polygon points="20,20 200,40 200,150 20,130" fill="red"></polygon>
+    </svg>
+    <p> 五角星</p>
+    <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="200"
+    height="200">
+        <polygon points="100,10 40,180 190,60 10,60 160,180"
+                 fill="red"
+                 stroke="black"
+                 stroke-width="5"
+                 fill-rule="evenodd"
+        >
+        </polygon>
+    </svg>
+    <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="200"
+         height="200">
+        <polygon points="100,10 40,180 190,60 10,60 160,180"
+                 fill="red"
+                 stroke="black"
+                 stroke-width="5"
+                 fill-rule="nonzero"
+        >
+        </polygon>
+    </svg>
+</div>
+<div>
+    <p>折线</p>
+    <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+        <polyline points="20,20 40,25 60,40 80,60 150,70"
+        style="fill: none;stroke:black; stroke-width:3"></polyline>
+    </svg>
+    <p>折线</p>
+    <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+        <polyline points="10,20 20,20 20,30 30,30 30,40 40,40 40,50 50,50"
+                  fill="none"
+                  stroke="red"
+                  stroke-width="3"
+        ></polyline>
+    </svg>
+</div>
+<div>
+    <p>路径</p>
+    <p>直线路径</p>
+    <p>使用L绘制直线</p>
+    <svg xmlns="http://www.w3.org/2000/svg" height="200" width="200">
+        <path d="M100 0 L50 200 L150 200 Z"
+              fill="red"
+              stroke-width="2"
+              stroke="black"
+        ></path>
+    </svg>
+    <p>使用H绘制平行线</p>
+    <svg>
+        <path d="M0,0 H200" stroke="red" stroke-width="5"></path>
+    </svg>
+    <p>使用V绘制垂直线</p>
+    <svg>
+        <path d="M0,0 V200" stroke-width="5" stroke="green"></path>
+    </svg>
+    <p>矩形</p>
+    <svg>
+        <path d="M10,10 H90 v90 H10 Z"></path>
+    </svg>
+    <p>曲线命令</p>
+    <p>三次贝塞尔曲线</p>
+    <svg>
+        <g  stroke="black" fill="none">
+            <path d="M10 10 C20 20,40 20,50 10"></path>
+            <path d="M70 10 C70 20,120 20,120 10"></path>
+            <path d="M130 10 C120 20,180 20,170 10"></path>
+        </g>
+        <g stroke="red" fill="red">
+            <path d="M10 10 L20 20" ></path>
+            <path d="M40 20 L50 10" stroke="red"></path>
+            <circle cx="10" cy="10" r="3"></circle>
+            <circle cx="20" cy="20" r="3"></circle>
+            <circle cx="40" cy="20" r="3"></circle>
+            <circle cx="50" cy="10" r="3"></circle>
+        </g>
+        <g stroke="red" fill="red">
+            <path d="M70 10 L70 20"></path>
+            <path d="M120 10 L120 20"></path>
+            <circle cx="70" cy="10" r="3"></circle>
+            <circle cx="70" cy="20" r="3"></circle>
+            <circle cx="120" cy="10" r="3"></circle>
+            <circle cx="120" cy="20" r="3"></circle>
+        </g>
+        <g stroke="red" fill="red">
+            <path d="M130 10 L120 20"></path>
+            <path d="M180 20 L170 10"></path>
+            <circle cx="130" cy="10" r="3"></circle>
+            <circle cx="120" cy="20" r="3"></circle>
+            <circle cx="180" cy="20" r="3"></circle>
+            <circle cx="170" cy="10" r="3"></circle>
+        </g>
+    </svg>
+    <p>连续三次贝塞尔曲线</p>
+    <svg>
+        <path d="M10 80,C 40 10, 65 10,95 80 S 150 150,180 80" stroke="black" stroke-width="3" fill="none"></path>
+        <g fill="red" stroke="red">
+            <circle cx="10" cy="80" r="3"></circle>
+            <circle cx="40" cy="10" r="3"></circle>
+            <circle cx="65" cy="10" r="3"></circle>
+            <circle cx="95" cy="80" r="3"></circle>
+            <circle cx="150" cy="150" r="3"></circle>
+            <circle cx="180" cy="80" r="3"></circle>
+            <path d="M10 80 L40 10"></path>
+            <path d="M95 80 L65 10"></path>
+            <path d="M150 150 L180 80"></path>
+        </g>
+    </svg>
+    <p>二次贝塞尔曲线</p>
+    <svg width="500" height="500">
+        <path id="lineAB" d="M100 350 l150 -300" stroke="red"
+              stroke-width="3" fill="none"></path>
+        <path id="lineBC" d="M250 50 l150 300" stroke="red"
+              stroke-width="3" fill="none"></path>
+        <path d="M175 200 l150 0" stroke="green"
+              stroke-width="3" fill="none"></path>
+        <path d="M100 350 Q250 50,400 350" stroke="green"
+              stroke-width="3" fill="none"></path>
+        <g stroke="black" stroke-width="3" fill="black">
+            <circle r="5" fill="black" cx="100" cy="350"></circle>
+            <circle r="5" fill="black" cx="250" cy="50"></circle>
+            <circle r="5" fill="black" cx="400" cy="350"></circle>
+        </g>
+        <g font-size="30" fill="black" stroke="none" text-anchor="middle">
+            <text x="100" y="350" dy="30">A</text>
+            <text x="250" y="50" dy="-20">B</text>
+            <text x="400" y="350" dy="30">C</text>
+        </g>
+    </svg>
+    <p>一段二次贝塞尔曲线</p>
+    <svg>
+        <path d="M0 100,Q50 0,100 100" stroke="red" fill ="none" stroke-width="3"></path>
+    </svg>
+    <p>连续的二次贝塞尔曲线</p>
+    <svg width="1000" height="200">
+        <path d="M0 100,Q50 0,100 100 T200 100 T300 100 t100 0 t100 0 t 100 0 t 100 0 t 100 0"  stroke="red" fill ="none" stroke-width="3"></path>
+        <path d="M50 100,Q100 0,150 100 t100 0 t100 0 t100 0 t100 0 t 100 0 t 100 0 t 100 0"  stroke="black" fill ="none" stroke-width="3"></path>
+    </svg>
+    <p>弧形</p>
+    <svg height="200">
+        <path d="M100 100 A50 50 0 0 0 150 100" fill="none" stroke-width="3" stroke="red"></path>
+    </svg>
+    <svg height="200">
+        <path d="M100 100 A50 50 0 1 0 150 100" fill="none" stroke-width="3" stroke="red"></path>
+    </svg>
+    <svg height="200">
+        <path d="M100 100 A50 50 0 0 1 150 100" fill="none" stroke-width="3" stroke="red"></path>
+    </svg>
+    <svg height="200">
+        <path d="M100 100 A50 50 0 1 1 150 100" fill="none" stroke-width="3" stroke="red"></path>
+    </svg>
+    <svg width="325px" height="325px" version="1.1" xmlns="http://www.w3.org/2000/svg">
+        <path d="M80 80 A 45 45, 0, 0, 0, 125 125 L 125 80 Z" fill="green"></path>
+        <path d="M230 80  A 45 45, 0, 1, 0, 275 125 L 275 80 Z" fill="red"></path>
+        <path d="M80 230  A 45 45, 0, 0, 1, 125 275 L 125 230 Z" fill="purple"></path>
+        <path d="M230 230 A 45 45, 0, 1, 1, 275 275 L 275 230 Z" fill="blue"></path>
+    </svg>
+</div>
+<div>
+    <p>文本</p>
+    <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+        <text x="0" y="15" fill="red">I love svg</text>
+    </svg>
+    <p>旋转的文字</p>
+    <svg>
+        <text x="0" y="15" fill="red" transform="rotate(30 20,40)">I love svg</text>
+    </svg>
+    <p>路径上的文字</p>
+    <svg xmlns="http://www.w3.org/2000/svg" version="1.1"
+         xmlns:xlink="http://www.w3.org/1999/xlink">
+        <!--<defs>-->
+            <path id="path1" d="M75,20 a1,1 0 0,0 100,0" fill="none" stroke-width="3" stroke="red"></path>
+        <!--</defs>-->
+        <text x="10" y="100" style="fill:red;">
+            <textPath xlink:href="#path1">I love SVG I love SVG</textPath>
+        </text>
+    </svg>
+</div>
+</body>
+</html>
